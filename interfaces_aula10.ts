@@ -1,4 +1,7 @@
+// interface 
+// implements
 interface Game {
+    id?: string | number;
     title: string;
     description: string;
     readonly genre: string;
@@ -35,4 +38,16 @@ const leftbehind: DLC = {
     platform: ["PS4"],
     originalGame: tlou,
     newContent: ["3 hours story", "new characters"]
+}
+
+class CreateGame implements Game {
+    title: string;
+    description: string;
+    genre: string;
+
+    constructor(t: string, d: string, g: string){
+        this.title = t;
+        this.description = d;
+        this.genre = g;
+    }
 }
